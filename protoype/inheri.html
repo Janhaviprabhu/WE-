@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// ---using create objects----//
+var car={
+    name:"ertiga",
+    company:"Maruti Suzuki",
+    seater:"7seater",
+
+}
+
+var model=Object.create(car,{name:{value:"Wagnor"}})
+
+
+console.log(model)
+
+// -- using constructor function--//
+
+function Models(n,c,s){
+    this.name=n
+    this.company=c
+    this.seater=s
+}
+
+
+
+Models.prototype.setprice=function(p){
+    this.price=p
+}
+
+var model1 = new Models("Waganor", "Maruti Suzuki", "5seater")
+model1.setprice(700000)
+console.log(model1)
+
+</script>
+</html>
